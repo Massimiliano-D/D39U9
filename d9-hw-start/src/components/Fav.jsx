@@ -3,9 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Col, Row, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// import { FaTrash } from "react-icons/fa";
-
-export default function Favs() {
+export default function Fav() {
   const jobs = useSelector((state) => state.jobs.content);
   const dispatch = useDispatch();
 
@@ -22,7 +20,7 @@ export default function Favs() {
                     variant="danger"
                     onClick={() => {
                       dispatch({
-                        type: "REMOVE_FROM_FAVS",
+                        type: "REMOVE_FROM_FAV",
                         payload: i,
                       });
                     }}
